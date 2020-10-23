@@ -1,0 +1,36 @@
+footer {
+	display: grid; grid-gap: 2rem 1rem; background-color: #101010; color: white; padding: 2rem 1rem;
+	grid-template-areas:
+		'footer-copyright footer-copyright'
+		'footer-line footer-line'
+		'footer-global footer-social';}
+
+footer > div {margin: auto 0;}
+footer a {color: rgba(255,255,255,0.75);} footer a:hover{color: #6FDEDE;}
+
+/*Copyright*/
+footer > p {grid-area: footer-copyright; font-size: 0.875rem;}
+
+/*HR*/
+footer > div:nth-of-type(1) {grid-area: footer-line; height: 0.0625rem; background-color: rgba(255,255,255,0.25);}
+
+/*Social*/
+footer > div:nth-of-type(2) {grid-area: footer-social; text-align: right; margin-top: -0.25rem; font-size: 0;}
+footer > div:nth-of-type(2) a {display: inline-block; font-family: "Font Awesome"; font-weight: initial; font-size: 1.25rem; color: white; padding: 0.5rem; width: 2.25rem; height: 2.25rem; text-align: center;}
+footer > div:nth-of-type(2) a:hover {color: #6FDEDE;}
+
+/*Copyright*/
+footer > div:nth-of-type(3) {grid-area: footer-global; text-align: left;}
+footer > div:nth-of-type(3) a {font-size: 0.75rem;}
+footer > div:nth-of-type(3) span {font-size: 1rem; line-height: 0.75rem; margin-left: 0.25rem; margin-right: 0.25rem;}
+
+/*720*/
+@media only screen and (max-width: 45rem) {
+	footer {grid-template-areas:
+		'footer-copyright footer-copyright'
+		'footer-line footer-line'
+		'footer-social footer-social'
+		'footer-global footer-global';}
+	footer > p {text-align: left;}
+	footer > div:nth-of-type(2) {text-align: center; margin-top: initial;}
+}

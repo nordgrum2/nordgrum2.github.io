@@ -1,0 +1,21 @@
+.shop ul {cursor: pointer; list-style-type: none; display: inline-block; width: 16rem; background-color: #101010; border-radius: 4rem; overflow: hidden; padding: 0.375rem 0; box-shadow: 0 0.125rem 0.5rem 0 rgba(0,0,0,0.25); transition: 0.375s ease-in-out;}
+.shop ul:hover {background-color: #6FDEDE;}
+
+.shop li {background-color: white; padding: 1rem; text-align: left; border-top: 0.05rem dotted rgba(0,0,0,0.75);}
+.shop li:nth-of-type(6) {border-bottom: 0.05rem dotted rgba(0,0,0,0.75);}
+.shop li:first-of-type {border-radius: 4rem 4rem 0 0;}
+.shop li:last-of-type {border-radius: 0 0 4rem 4rem;}
+.shop li:first-of-type, .shop li:last-of-type {font-size: 1.25rem; text-align: center; margin: 0 0.375rem; border-top: initial;}
+
+.snipcart-items-count {position: absolute; display: inline-block; font-size: 0.875rem; color: #6FDEDE; margin-top: -0.625rem; margin-left: -0.875rem;}
+
+.snipcart * {font-family: 'EP' !important;}
+.snipcart-featured-payment-methods {display: none !important;}
+.snipcart-item-line__title {font-weight: 400 !important;}
+.snipcart-item-description {text-align: left;}
+
+.cart-added {z-index: 2; position: fixed; left: 50%; top: 50%; transform: translate(-50%,-50%) scale(0); width: 16rem; height: 16rem; background-color: rgba(39,142,132,0.75); padding-top: 2.5rem; border-radius: 2rem; box-shadow: 0 0.125rem 1rem 0 rgba(0,0,0,0.25); pointer-events: none; opacity: 0;}
+.cart-added span {display: block; color: white;}
+.cart-added span:nth-of-type(1) {font-weight: bold; font-size: 1.25rem; text-transform: uppercase; letter-spacing: 0.625rem; padding-left: 0.625rem;}
+.cart-added span:nth-of-type(2) {font-family: "Segoe MDL2 Assets"; font-size: 8rem; margin-top: 2rem;}
+@keyframes cart-added {37.5% {transform: translate(-50%,-50%) scale(1); opacity: 1;} 75.5% {transform: translate(-50%,-50%) scale(1); opacity: 1;} 99.9% {transform: translate(-50%,-50%) scale(2); opacity: 0;} 100% {transform: translate(-50%,-50%) scale(0);}}
