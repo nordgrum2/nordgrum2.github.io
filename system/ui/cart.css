@@ -1,11 +1,18 @@
-.shop ul {cursor: pointer; list-style-type: none; display: inline-block; width: 16rem; background-color: #101010; border-radius: 4rem; overflow: hidden; padding: 0.375rem 0; box-shadow: 0 0.125rem 0.5rem 0 rgba(0,0,0,0.25); transition: 0.375s ease-in-out;}
+.shop-title {border-top: 0.075rem solid black; text-align: left; margin-top: 8rem; margin-left: 1rem; margin-right: 1rem;}
+.shop-title h2, .shop-title h3 {display: inline-block; background-color: white; font-size: 1.25rem; margin-top: -0.75rem; padding-right: 1rem;}
+
+.shop ul {cursor: pointer; list-style-type: none; display: inline-block; width: 16rem; background-color: white; border-radius: 2rem; box-shadow: 0 0.125rem 0.5rem 0 rgba(0,0,0,0.25); padding-top: 0.5rem; padding-bottom: 0.5rem; transition: 0.375s ease-in-out;}
 .shop ul:hover {background-color: #6FDEDE;}
 
-.shop li {background-color: white; padding: 1rem; text-align: left; border-top: 0.05rem dotted rgba(0,0,0,0.75);}
-.shop li:nth-of-type(6) {border-bottom: 0.05rem dotted rgba(0,0,0,0.75);}
-.shop li:first-of-type {border-radius: 4rem 4rem 0 0;}
-.shop li:last-of-type {border-radius: 0 0 4rem 4rem;}
-.shop li:first-of-type, .shop li:last-of-type {font-size: 1.25rem; text-align: center; margin: 0 0.375rem; border-top: initial;}
+.shop li {padding: 0.75rem 1rem; text-align: left; border-top: 0.075rem dotted rgba(0,0,0,0.5);}
+.shop li img {border-radius: 50%;}
+.shop li:first-of-type, .shop li:nth-of-type(2) {border-top: initial; text-align: center;}
+.shop li:nth-of-type(2) {font-weight: 700; text-transform: uppercase;}
+
+.shop ul.se {background-color: #101010; color: white;}
+.shop ul.se:hover {color: #6FDEDE;}
+.shop ul.se li {border-top: 0.075rem dotted rgba(255,255,255,0.5);}
+.shop ul.se li:first-of-type, .shop ul.se li:nth-of-type(2) {border-top: initial;}
 
 .snipcart-items-count {position: absolute; display: inline-block; font-size: 0.875rem; color: #6FDEDE; margin-top: -0.625rem; margin-left: -0.875rem;}
 

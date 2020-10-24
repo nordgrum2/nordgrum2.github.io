@@ -107,18 +107,18 @@ a.mdl2, span.mdl2, li.mdl2, a.fa, span.fa, li.fa {display: inline-block;}
 }
 @media only screen and (max-width: 52.5rem)/*840*/
 {
-	.vw {width: 80%;} .grid-col-4 {grid-template-columns: auto auto;}
+	.vw {width: 80%;} .grid-col-3, .grid-col-4 {grid-template-columns: auto auto;}
 }
 @media only screen and (max-width: 45rem)/*720*/
 {
-	.vw {width: 85%;} .grid-col-3 {grid-template-columns: auto;} .grid-col-6 {grid-template-columns: auto auto auto;}
+	.vw {width: 85%;} .grid-col-6 {grid-template-columns: auto auto auto;}
 	.trust-us img {width: 100%;}
 }
 @media only screen and (max-width: 37.5rem)/*600*/
 {
 	.vw {width: 90%;}
 	.grid-col-6 {grid-template-columns: auto auto;}
-	.grid-col-2, .grid-col-4 {grid-template-columns: auto;}
+	.grid-col-2, .grid-col-3, .grid-col-4 {grid-template-columns: auto;}
 }
 @media only screen and (max-width: 32rem)/*512*/
 {

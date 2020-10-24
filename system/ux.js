@@ -63,7 +63,7 @@ $('a, button, input, .snipcart-add-item').hover(function(){$('.cursor').css({'co
 $('footer, .desktop, .nav').hover(function(){$('.cursor').css({'color': 'white', 'text-shadow': '0 0 0 0.25rem black'}); $('.circle').css({'border': 'solid 0.0625rem white', 'box-shadow': '0 0 0 0.0625rem black'});},
 				  function(){$('.cursor').css({'color': 'black', 'text-shadow': '0 0 0 0.25rem white'}); $('.circle').css({'border': 'solid 0.0625rem black', 'box-shadow': '0 0 0 0.0625rem white'});});
 
-$('footer a, .desktop a, .desktop .mdl2, .nav a').hover(function(){$('.cursor').css({'color': 'white', 'text-shadow': 'initial'}); $('.circle').css({'background-color': 'rgba(255,255,255,0.25)', 'border': 'initial', 'box-shadow': 'initial'});},
+$('footer a, .desktop a, .desktop .mdl2, .nav a, .shop ul.se').hover(function(){$('.cursor').css({'color': 'white', 'text-shadow': 'initial'}); $('.circle').css({'background-color': 'rgba(255,255,255,0.25)', 'border': 'initial', 'box-shadow': 'initial'});},
 					function(){$('.cursor').css({'color': 'white', 'text-shadow': '0 0 0 0.25rem black'}); $('.circle').css({'background-color': 'initial', 'border': 'solid 0.0625rem white', 'box-shadow': '0 0 0 0.0625rem black'});});
 
 //Parallax
