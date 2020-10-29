@@ -93,42 +93,13 @@ a.mdl2, span.mdl2, li.mdl2, a.fa, span.fa, li.fa {display: inline-block;}
 
 .trust-us {background-color: #6FDEDE; padding: 2rem 1rem; margin-top: 4rem; pointer-events: none;}
 .trust-us div {display: inline-block; border-radius: 4rem; border-top: 0.25rem solid #6FDEDE; border-bottom: 0.25rem solid white; margin-top: -4.375rem;}
-.trust-us h2 {font-size: 3.5vh; letter-spacing: 0.7vh; font-weight: 400; text-transform: uppercase; background-color: #202020; color: #6FDEDE; padding: 1rem 2rem; border-radius: 4rem; display: inline-block; margin: 0.375rem; text-shadow: 0 0 1rem rgba(111,222,222,0.5);}
+.trust-us h2 {letter-spacing: 0.375rem; text-transform: uppercase; background-color: #202020; color: #6FDEDE; padding: 1rem 2rem; border-radius: 4rem; display: inline-block; margin: 0.375rem; text-shadow: 0 0 1rem rgba(111,222,222,0.5);}
 .trust-us img {width: 75%; opacity: 0.75; margin-top: 1rem;}
 
 /*Breakpoints*/
-@media only screen and (max-width: 67.5rem)/*1080*/
-{
-	.vw {width: 70%;} .grid-col-4 {grid-template-columns: auto auto auto;} .grid-col-6 {grid-template-columns: auto auto auto auto;}
+@media only screen and (max-width: 67.5rem)/*1080*/{
+	.grid-col-2 {grid-template-columns: auto;}
 }
-@media only screen and (max-width: 60rem)/*960*/
-{
-	.vw {width: 75%;}
-}
-@media only screen and (max-width: 52.5rem)/*840*/
-{
-	.vw {width: 80%;} .grid-col-3, .grid-col-4 {grid-template-columns: auto auto;}
-}
-@media only screen and (max-width: 45rem)/*720*/
-{
-	.vw {width: 85%;} .grid-col-6 {grid-template-columns: auto auto auto;}
+@media only screen and (max-width: 45rem)/*720*/{
 	.trust-us img {width: 100%;}
-}
-@media only screen and (max-width: 37.5rem)/*600*/
-{
-	.vw {width: 90%;}
-	.grid-col-6 {grid-template-columns: auto auto;}
-	.grid-col-2, .grid-col-3, .grid-col-4 {grid-template-columns: auto;}
-}
-@media only screen and (max-width: 32rem)/*512*/
-{
-	.vw {width: 95%;}
-}
-@media only screen and (max-width: 30rem)/*480*/
-{
-	.vw {display: block; width: initial;}
-}
-@media only screen and (max-width: 26.25rem)/*420*/
-{
-	.grid-col-6 {grid-template-columns: auto;}
 }

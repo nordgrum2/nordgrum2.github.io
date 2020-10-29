@@ -1,29 +1,78 @@
-.desktop {display: inline-block; width: 4rem; height: 100%; position: fixed; top: 0; left: 0; z-index: 3; background-color: #101010;}
-.desktop > a:first-of-type {
-	display: inline-block; width: 4rem; height: 3.875rem; padding: 1.1rem 0.9rem 0.9rem 1.1rem;
-	background-color: #6FDEDE; color: black; 
-	font-family: monospace; font-size: 0.5rem; line-height: 0.5rem; letter-spacing: 0.25rem;}
-.desktop > a:first-of-type:hover {background-color: rgba(111,222,222,0.75);}
-
-.desktop > a, .desktop > span, .desktop > div:last-child a {display: inline-block; transition: ease-in-out 0.375s;}
-
-.desktop > a.mdl2, .desktop > span, .desktop > div:last-child a {color: rgba(255,255,255,0.9); padding: 1.375rem; letter-spacing: initial;}
-.desktop > div:last-child {position: absolute; bottom: 0;}
-.desktop > div:last-child a:last-child {background-color: rgba(255,255,255,0.0625);}
-
-.desktop > a:hover, .desktop > span:hover, .desktop > div:last-child a:hover {background-color: rgba(111,222,222,0.25);}
-
-.mob {display: none; width: 100%; position: sticky; top: 0; left: 0; z-index: 3; background-color: rgba(16,16,16,0.75); box-shadow: 0 0.125rem 0.25rem 0 rgba(0,0,0,0.125); transition: ease-in-out 0.375s;}
-.mob > a:first-of-type {color: rgba(255,255,255,0.9); float: left; padding: 1.125rem; text-transform: uppercase; letter-spacing: 0.375rem;}
-.mob > a:first-of-type:hover {color: rgba(111,222,222,0.9); letter-spacing: 0.5625rem;}
-.mob > a:last-of-type {display: inline-block; width: 3.5rem; height: 3.5rem; background-color: #6FDEDE; font-family: monospace; font-size: 0.5rem; line-height: 0.5rem; letter-spacing: 0.25rem; float: right; padding: 0.9rem 0.85rem 1.1rem 1.15rem; transition: ease-in 0.125s;}
-.mob > a:last-of-type:hover {background-color: rgba(111,222,222,0.9); color: black;}
-
 .nav {
-	position: fixed; top: 0; right: -125%; width: 100%; height: 100%; overflow-y: auto; z-index: 4;
-	display: grid; grid-template-columns: auto auto auto auto; grid-gap: 0.5rem; padding: 1rem;
-	background-color: rgba(0,0,0,0.975); transition: 0.375s ease-in-out;}
-.nav * {color: white;}
-.nav > a:first-of-type {display: inline-block; position: absolute; top: 0; right: 0; padding: 1rem; font-family: 'Segoe MDL2 Assets'; font-size: 1.5rem;}
+	display: grid; width: calc(100% - 24.5rem); height: calc(100% - 5.25rem);
+	z-index: 3; position: fixed; bottom: 0; left: -125%;
+	background-color: #202020; padding: 2rem; overflow-y: auto; transition: ease-in-out 0.375s;
+	grid-gap: 2rem; grid-template-areas:
+		'nav-1 nav-2'
+		'nav-3 nav-2';
+}
 
-@media only screen and (max-width: 45rem)/*720*/{.desktop {display: none;} .mob {display: inline-block;}}
+.nav * {color: white;}
+.nav li {transition: ease-in-out 0.375s;}
+.nav li a span {display: inline-block; font-family: 'Segoe MDL2 Assets'; font-size: 1.25rem; transition: ease-in-out 0.375s;}
+
+/*Nav-1*/
+.nav-1 {grid-area: nav-1; text-align: left;}
+.nav-1 li:first-of-type {padding-bottom: 1rem; margin-bottom: 2rem; border-bottom: 0.075rem solid rgba(255,255,255,0.25); letter-spacing: 0.5rem; text-transform: uppercase; text-align: center;}
+
+.nav-1 li a {display: inline-block; letter-spacing: 0.1rem; padding: 0.5rem 0;}
+.nav-1 li a span {display: inline-block; margin-right: 1rem; line-height: 1rem;}
+.nav-1 li a:hover, .nav-1 li a:hover span {letter-spacing: 0.4rem; color: #6FDEDE;}
+
+/*Nav-2*/
+.nav-2 {grid-area: nav-2;}
+.nav-2 li:first-of-type {padding-bottom: 1rem; margin-bottom: 2rem; border-bottom: 0.075rem solid rgba(255,255,255,0.25); letter-spacing: 0.5rem; text-transform: uppercase; text-align: center; height: initial; background-color: initial;}
+.nav-2 li:first-of-type:hover {background-color: initial;}
+
+.nav-2 li {height: 8rem; background-color: rgba(111,222,222,0.0625); margin-bottom: 0.5rem;}
+.nav-2 li:hover {background-color: rgba(111,222,222,0.125);}
+.nav-2 li:hover * {color: white;}
+.nav-2 li a {display: inline-block; width: 100%; height: 100%; padding: 1rem;}
+.nav-2 li a span {display: block; font-size: 2.5rem; margin-top: 0.5rem; margin-bottom: 1rem;}
+
+/*
+Nav-3
+grid-template-columns: repeat(3, minmax(0, 1fr));
+*/
+.nav-3 {grid-area: nav-3; display: grid;  grid-gap: 0.5rem; padding-bottom: 1rem; grid-template-areas:
+		'nav-3t nav-3t nav-3t'
+		'nav-3i-1 nav-3i-2 nav-3i-3';}
+.nav-3 li:first-of-type {grid-area: nav-3t; padding-bottom: 1rem; margin-bottom: 2rem; border-bottom: 0.075rem solid rgba(255,255,255,0.25); letter-spacing: 0.5rem; text-transform: uppercase; text-align: center; height: 2rem; background-color: initial;}
+.nav-3 li:first-of-type:hover {background-color: initial;}
+
+.nav-3 li:nth-of-type(2) {grid-area: nav-3i-1;}
+.nav-3 li:nth-of-type(3) {grid-area: nav-3i-2;}
+.nav-3 li:nth-of-type(4) {grid-area: nav-3i-3;}
+.nav-3 li {height: 8rem; background-color: rgba(111,222,222,0.0625);}
+.nav-3 li:hover {background-color: rgba(111,222,222,0.125);}
+.nav-3 li:hover * {color: white;}
+.nav-3 li a {display: inline-block; width: 100%; height: 100%; padding: 1rem;}
+.nav-3 li a span {display: block; font-size: 2.5rem; margin-top: 0.5rem; margin-bottom: 1rem;}
+
+/*Page Nav*/
+.page-nav {grid-area: page-nav; background-color: #202020;}
+.page-nav ul {position: sticky; top: 50%; transform: translate(0%,-50%); margin: 0 2rem; width: 16rem;}
+
+.page-nav > a:first-of-type {position: fixed; top: 0; left: 0; display: inline-block; width: 20rem; text-align: center; background-color: #6FDEDE; color: black; padding: 2.05rem 0; letter-spacing: 0.5rem;}
+.page-nav > a:last-of-type {position: fixed; bottom: 0; left: 0; display: inline-block; width: 20rem; padding: 2rem; text-align: center; color: #6FDEDE;}
+
+.page-nav li:first-of-type {text-align: center; border-bottom: 0.075rem solid rgba(255,255,255,0.25); padding-bottom: 2rem; margin-bottom: 2rem;}
+.page-nav li:last-of-type {text-align: center; border-top: 0.075rem solid rgba(255,255,255,0.25); padding-top: 2rem; margin-top: 2rem;}
+
+.page-nav li {text-align: left; white-space: nowrap; padding: 0.25rem 0;}
+.page-nav li a {color: white;}
+.page-nav li a:hover {color: #6FDEDE;}
+
+@media only screen and (max-width: 67.5rem)/*1080*/{
+	.nav {grid-template-areas:
+			'nav-1'
+			'nav-2'
+			'nav-3';}
+}
+@media only screen and (max-width: 45rem)/*720*/{
+	.page-nav {display: none;}
+	.nav {width: 100%; height: calc(100% - 3.25rem); padding: 1rem; grid-gap: 4rem;}
+	.nav-3 li {height: 6rem;}
+	.nav-3 li a {padding: 0.75rem;}
+	.nav-3 li a span {margin-top: initial; margin-bottom: 1rem;}
+}

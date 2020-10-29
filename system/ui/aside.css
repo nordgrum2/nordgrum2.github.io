@@ -1,0 +1,8 @@
+.social {grid-area: social; background-color: #202020;}
+.social ul {position: sticky; top: 50%; transform: translate(0,-50%);}
+.social li:first-of-type a {margin-top: initial;}
+.social a {display: inline-block; transform: rotate(90deg); margin-top: 8rem; color: white;}
+
+@media only screen and (max-width: 45rem)/*720*/{
+	.social {display: none;}
+}

@@ -1,4 +1,4 @@
-.shop-title {border-top: 0.075rem solid black; text-align: left; margin-top: 8rem; margin-left: 1rem; margin-right: 1rem;}
+.shop-title {border-top: 0.1rem solid black; text-align: left; margin-top: 8rem; margin-left: 1rem; margin-right: 1rem;}
 .shop-title h2, .shop-title h3 {display: inline-block; background-color: white; font-size: 1.25rem; margin-top: -0.75rem; padding-right: 1rem;}
 
 .shop ul {cursor: pointer; list-style-type: none; display: inline-block; width: 16rem; background-color: white; border-radius: 2rem; box-shadow: 0 0.125rem 0.5rem 0 rgba(0,0,0,0.25); padding-top: 0.5rem; padding-bottom: 0.5rem; transition: 0.375s ease-in-out;}
@@ -9,20 +9,14 @@
 .shop li:first-of-type, .shop li:nth-of-type(2) {border-top: initial; text-align: center;}
 .shop li:nth-of-type(2) {font-weight: 700; text-transform: uppercase;}
 
-.shop ul.se {background-color: #101010; color: white;}
+.shop ul.se {background-color: #202020; color: white;}
 .shop ul.se:hover {color: #6FDEDE;}
 .shop ul.se li {border-top: 0.075rem dotted rgba(255,255,255,0.5);}
 .shop ul.se li:first-of-type, .shop ul.se li:nth-of-type(2) {border-top: initial;}
 
-.snipcart-items-count {position: absolute; display: inline-block; font-size: 0.875rem; color: #6FDEDE; margin-top: -0.625rem; margin-left: -0.875rem;}
+.snipcart-items-count {position: absolute; display: inline-block; font-size: 0.75rem; color: #6FDEDE; margin-top: -0.5rem; margin-left: -0.775rem;}
 
 .snipcart * {font-family: 'EP' !important;}
 .snipcart-featured-payment-methods {display: none !important;}
 .snipcart-item-line__title {font-weight: 400 !important;}
 .snipcart-item-description {text-align: left;}
-
-.cart-added {z-index: 2; position: fixed; left: 50%; top: 50%; transform: translate(-50%,-50%) scale(0); width: 16rem; height: 16rem; background-color: rgba(39,142,132,0.75); padding-top: 2.5rem; border-radius: 2rem; box-shadow: 0 0.125rem 1rem 0 rgba(0,0,0,0.25); pointer-events: none; opacity: 0;}
-.cart-added span {display: block; color: white;}
-.cart-added span:nth-of-type(1) {font-weight: bold; font-size: 1.25rem; text-transform: uppercase; letter-spacing: 0.625rem; padding-left: 0.625rem;}
-.cart-added span:nth-of-type(2) {font-family: "Segoe MDL2 Assets"; font-size: 8rem; margin-top: 2rem;}
-@keyframes cart-added {37.5% {transform: translate(-50%,-50%) scale(1); opacity: 1;} 75.5% {transform: translate(-50%,-50%) scale(1); opacity: 1;} 99.9% {transform: translate(-50%,-50%) scale(2); opacity: 0;} 100% {transform: translate(-50%,-50%) scale(0);}}

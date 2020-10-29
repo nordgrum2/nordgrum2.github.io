@@ -1,29 +1,43 @@
-@import url('ui/nav.css'); @import url('ui/footer.css');
-@import url('ui/class.css'); @import url('ui/cart.css'); @import url('ui/aos.css');
+/*Modules*/
+@import url('ui/header.css');
+@import url('ui/nav.css');
+@import url('ui/footer.css');
+@import url('ui/aside.css');
+@import url('ui/class.css');
 
-/*Icon*/
+/*Features*/
+@import url('ui/cart.css');
+@import url('ui/aos.css');
+
+/*Icons*/
 @font-face {font-family: 'Segoe MDL2 Assets'; src: url('../libs/fonts/Segoe MDL2 Assets.woff2');}
 @font-face {font-family: 'Font Awesome'; src: url('../libs/fonts/Font Awesome.woff2');}
 
-/*Font*/
+/*Fonts*/
 @font-face {font-family: 'EP'; src: url('../libs/fonts/EP.woff2');}
 @font-face {font-family: 'EP'; src: url('../libs/fonts/EP Bold.woff2'); font-weight: 700;}
 
-/*Root*/
-html {text-align: center; scroll-behavior: smooth;}
-body {overflow-x: hidden; overflow-y: hidden; background-color: white;}
-* {box-sizing: border-box; vertical-align: top; border: initial; margin: initial; padding: initial; outline: initial; font-family: 'EP', Sans-Serif; cursor: none !important;}
+/*UI*/
+html {text-align: center; scroll-behavior: smooth;} body {overflow-x: hidden; overflow-y: hidden;}
 :hover, :focus, :after, :before {outline: initial;}
 
-/*Tag*/
-section, article {margin-top: 3rem;}
+* {box-sizing: border-box; vertical-align: top; border: initial; margin: initial; padding: initial; outline: initial; font-family: 'EP', Sans-Serif; cursor: none;}
 
-header, section, article, footer {width: calc(100% - 4rem); float: right; z-index: 1;}
-header, section, article {display: inline-block;}
+body {background-color: white; display: grid;
+	grid-template-areas:
+	'page-nav header header'
+	'page-nav content social'
+	'page-nav footer social';}
 
-h1 {font-size: 2rem;}
-h2 {font-size: 1.5rem;}
-h3 {font-size: 1.25rem;}
+body > section, body > article {grid-area: content;}
+body > footer {grid-area: footer;}
+
+section {padding-top: 2rem;}
+section > h1, section > h2, section > h3, section > p {padding-left: 1rem; padding-right: 1rem;}
+
+h1 {font-size: 1.25rem;}
+h2 {font-size: 1.125rem;}
+h3 {font-size: 1rem;}
 
 a, p, q, li, span, address, input, output, textarea, label, td {font-size: 1rem;}
 
@@ -43,6 +57,8 @@ q {font-style: italic;}
 mark {background: linear-gradient(transparent 60%,rgba(111,222,222,0.25) 40%);}
 
 iframe {width: 0; height: 0; display: none; visibility: hidden;}
+
+ul {list-style-type: none;}
 
 /*
 body > video {position: fixed; object-fit: cover; min-width: 100%; min-height: 100%; height: 125%; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: -1;}
@@ -85,48 +101,27 @@ fieldset ol {text-align: left; margin: 0.75rem; margin-left: initial;}
 fieldset li:first-child {padding-top: initial;}
 fieldset li {padding: 0.75rem;}
 
-/*Global*/
-[ta_lr] *:first-child {text-align: left;} [ta_lr] * {text-align: right;}
-[bt] {border-top: 0.0625rem solid rgba(0,0,0,0.25); padding-top: 1rem;}
-[db] {display: block !important;} [dib] {display: inline-block;} [dn] {display: none;}
-[fs0] {font-size: 0rem;} [ls=ngt] {letter-spacing: -0.0625rem; white-space: nowrap;}
-[f=l] {float: left;} [f=r] {float: right;}
-[mw=r16] {min-width: 19rem; max-width: 100%;}
-
-[mdl2=img] {background-color: rgba(0,0,0,0.0625); border-radius: 50%; font-size: 6rem; padding: 2rem;}
-[mdl2=icon] {font-size: 8rem;}
-
-[icon-font] {border-radius: 50%; border: solid 0.0875rem black; padding: 0.6625rem;}
-[icon-img] {border-radius: 50%; width: 3.25rem;}
-
-[type=slide-1] {background: transparent url('../media/jpg/home/slide-1.jpg') no-repeat fixed center/cover;}
-[type=slide-2] {background: transparent url('../media/jpg/home/slide-2.jpg') no-repeat fixed center/cover;}
-[type=slide-1], [type=slide-2] {filter: contrast(110%) brightness(110%) sepia(30%) grayscale(100%);}
-
-/*Design*/
-[type=section] {margin: 1rem; padding: 1rem; border-radius: 0.125rem; box-shadow: 0 0.125rem 1rem 0 rgba(0,0,0,0.125);}
-[type=section] p {margin-top: 1.5rem;}
-
-section > h1, section > h2, section > h3, section > p, .vw > h1, .vw > h2, .vw > h3, .vw > p {padding-left: 1rem; padding-right: 1rem;}
-[p=i] {padding: initial;}
-
 /*article*/
-[article] {text-align: left;} [article] h2 {margin-top: 3rem;} [article] h3 {margin-top: 1.5rem;} [article] p {margin-top: 0.75rem;}
 [pbl] {border-left: solid 0.25rem #6FDEDE; margin-left: 1rem; margin-top: 1.5rem; margin-right: 1rem; background-color: rgba(111,222,222,0.05);} [pbl] > p {text-align: left; padding: 0.5rem 1rem; margin-top: initial;}
 
 /*Transition*/
-a, input, output {transition: ease-in-out 0.25s;}
+a, input, output {transition: ease-in-out 0.375s;}
 
 /*Animations*/
 @keyframes share {50% {transform: scale(1.125);}}
 @keyframes stop {0% {} 50% {filter: invert(100%);} 100% {}}
 @keyframes noise {0% {background-position: 50%,50%} 50% {background-position: 45%,55%} 100% {background-position: 50%,50%}}
 
+@media (prefers-color-scheme: dark) {
+	a {fill: #000000;}
+}
+/*@media (prefers-color-scheme: light) {path {fill: #000000;}}*/
+
 /*Breakpoints*/
-@media only screen and (max-width: 45rem)/*720*/
-{
-	header, section, article {display: block; width: initial; float: initial;}
-	footer {width: initial; float: initial;}
-	* {cursor: initial !important;}
-	section, article {margin-top: initial;}
+@media only screen and (max-width: 45rem)/*720*/{
+	body {grid-template-areas:
+		'header'
+		'content'
+		'footer';}
+	* {cursor: initial;}
 }

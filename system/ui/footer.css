@@ -1,5 +1,5 @@
 footer {
-	display: grid; grid-gap: 2rem 1rem; background-color: #101010; color: white; padding: 2rem 1rem;
+	display: grid; grid-gap: 2rem 1rem; background-color: #202020; color: white; padding: 2rem;
 	grid-template-areas:
 		'footer-copyright footer-copyright'
 		'footer-line footer-line'
