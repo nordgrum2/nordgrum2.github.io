@@ -1,15 +1,15 @@
-header {grid-area: header; position: sticky; top: 0; background-color: #202020; z-index: 2; transition: ease-in-out 0.375s;}
+header {grid-area: header; position: sticky; top: 0; background-color: #202020; z-index: 2; transition: ease-in-out 0.375s; height: 5rem;}
 header ul {text-align: right; padding: 1rem;}
 
 header li {display: inline-block;}
 header li > span {display: inline-block; padding: 1rem; color: white;}
 header li:first-of-type {float: left;}
 
-.nav-s {display: inline-block; width: 3.25rem; height: 3.25rem; padding: 0.8rem 1.1rem 1.2rem 0.9rem; font-family: monospace; font-size: 0.5rem; line-height: 0.5rem; letter-spacing: 0.25rem; color: #6FDEDE;}
-.nav-c {display: none; font-family: "Segoe MDL2 Assets"; font-size: 1.25rem; padding: 1rem; color: #6FDEDE;}
+.nav-s {display: inline-block; width: 3rem; height: 3rem; padding: 0.7rem 0.7rem 0.8rem 0.8rem; font-family: monospace; font-size: 0.5rem; line-height: 0.5rem; letter-spacing: 0.25rem; color: #6FDEDE;}
+.nav-c {display: none; font-family: "Segoe MDL2 Assets"; font-size: 1.5rem; padding: 0.75rem; color: #6FDEDE;}
 
-@media only screen and (max-width: 45rem)/*720*/{
-	header {box-shadow: 0 0.125rem 0.25rem 0 rgba(0,0,0,0.125);}
-	header ul {text-align: left; padding: initial;}
+@media only screen and (max-width: 720) {
+	header {background-color: rgba(32,32,32,0.95); box-shadow: 0 0.125rem 0.25rem 0 rgba(0,0,0,0.125); height: 4rem;}
+	header ul {text-align: left; padding: 0.45rem;}
 	header li:first-of-type {float: right;}
 }

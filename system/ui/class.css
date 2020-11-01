@@ -97,9 +97,9 @@ a.mdl2, span.mdl2, li.mdl2, a.fa, span.fa, li.fa {display: inline-block;}
 .trust-us img {width: 75%; opacity: 0.75; margin-top: 1rem;}
 
 /*Breakpoints*/
-@media only screen and (max-width: 67.5rem)/*1080*/{
+@media only screen and (max-width: 1080) {
 	.grid-col-2 {grid-template-columns: auto;}
 }
-@media only screen and (max-width: 45rem)/*720*/{
+@media only screen and (max-width: 720) {
 	.trust-us img {width: 100%;}
 }

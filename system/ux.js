@@ -23,7 +23,7 @@ if ($(window).width() < 720) {var scroll_time = 90000; $('.page-nav, .social').r
 //Nav Hide
 var nps = window.pageYOffset;
 if ($(window).width() < 720) {window.onscroll = function() {
-	var ncs = window.pageYOffset; if (nps > ncs) {$('header').css({'top': '0', 'box-shadow': '0 0.125rem 0.25rem 0 rgba(0,0,0,0.125)'});} else {$('header').css({'top': '-3.5rem', 'box-shadow': 'initial'});} nps = ncs;}
+	var ncs = window.pageYOffset; if (nps > ncs) {$('header').css({'top': '0', 'box-shadow': '0 0.125rem 0.25rem 0 rgba(0,0,0,0.125)'});} else {$('header').css({'top': '-4rem', 'box-shadow': 'initial'});} nps = ncs;}
 }
 
 function nav() {$('.nav').css('left', nav_left); $('body').css('overflow-y', 'hidden'); $('.nav-s').css('display', 'none'); $('.nav-c').css('display', 'inline-block');}

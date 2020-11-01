@@ -3,11 +3,14 @@
 @import url('ui/nav.css');
 @import url('ui/footer.css');
 @import url('ui/aside.css');
-@import url('ui/class.css');
+
+/*Modules 2*/
+@import url('ui/page-nav.css');
 
 /*Features*/
 @import url('ui/cart.css');
 @import url('ui/aos.css');
+@import url('ui/class.css');
 
 /*Icons*/
 @font-face {font-family: 'Segoe MDL2 Assets'; src: url('../libs/fonts/Segoe MDL2 Assets.woff2');}
@@ -35,9 +38,9 @@ body > footer {grid-area: footer;}
 section {padding-top: 2rem;}
 section > h1, section > h2, section > h3, section > p {padding-left: 1rem; padding-right: 1rem;}
 
-h1 {font-size: 1.25rem;}
-h2 {font-size: 1.125rem;}
-h3 {font-size: 1rem;}
+h1 {font-size: 1.5rem; letter-spacing: 0.15rem;}
+h2 {font-size: 1.25rem; letter-spacing: 0.125rem;}
+h3 {font-size: 1rem; letter-spacing: 0.1rem;}
 
 a, p, q, li, span, address, input, output, textarea, label, td {font-size: 1rem;}
 
@@ -118,7 +121,7 @@ a, input, output {transition: ease-in-out 0.375s;}
 /*@media (prefers-color-scheme: light) {path {fill: #000000;}}*/
 
 /*Breakpoints*/
-@media only screen and (max-width: 45rem)/*720*/{
+@media only screen and (max-width: 720) {
 	body {grid-template-areas:
 		'header'
 		'content'
