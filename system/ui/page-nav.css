@@ -1,8 +1,10 @@
 .page-nav {grid-area: page-nav; background-color: #202020; width: 20rem;}
 .page-nav ul {position: sticky; top: 0; overflow-y: auto; height: 100vh;}
 
-.page-nav li:first-of-type {height: 5rem; text-align: center; background-color: #6FDEDE; padding: initial; margin: initial; margin-bottom: 2rem;}
+.page-nav li:first-of-type {height: 5rem; text-align: center; background-color: rgba(111,222,222,1); padding: initial; margin: initial; margin-bottom: 2rem; transition: ease-in-out 0.375s;}
+.page-nav li:first-of-type:hover {background-color: rgba(111,222,222,0.875);}
 .page-nav li:first-of-type a {display: inline-block; width: 100%; padding: 2rem 0; color: black; letter-spacing: 0.5rem;}
+.page-nav li:first-of-type a:hover {color: black;}
 
 .page-nav li:nth-of-type(2) {text-align: center; border-bottom: 0.075rem solid rgba(255,255,255,0.25); padding-bottom: 2rem; margin-bottom: 2rem;}
 .page-nav li:nth-last-of-type(2) {text-align: center; border-top: 0.075rem solid rgba(255,255,255,0.25); padding-top: 2rem; margin-top: 2rem;}
@@ -12,4 +14,4 @@
 .page-nav li a {color: white;}
 .page-nav li a:hover {color: #6FDEDE;}
 
-@media only screen and (max-width: 45rem) {.page-nav {display: none;}}
+@media only screen and (max-width: 720px) {.page-nav {display: none;}}

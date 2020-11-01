@@ -2,13 +2,12 @@
 @import url('ui/header.css');
 @import url('ui/nav.css');
 @import url('ui/footer.css');
-@import url('ui/aside.css');
 
 /*Modules 2*/
 @import url('ui/page-nav.css');
 
 /*Features*/
-@import url('ui/cart.css');
+@import url('ui/shop.css');
 @import url('ui/aos.css');
 @import url('ui/class.css');
 
@@ -32,11 +31,11 @@ body {background-color: white; display: grid;
 	'page-nav content social'
 	'page-nav footer social';}
 
-body > section, body > article {grid-area: content;}
+body > section {grid-area: content;}
 body > footer {grid-area: footer;}
 
 section {padding-top: 2rem;}
-section > h1, section > h2, section > h3, section > p {padding-left: 1rem; padding-right: 1rem;}
+section > h1, section > h2, section > h3, section > p {padding-left: 2rem; padding-right: 2rem;}
 
 h1 {font-size: 1.5rem; letter-spacing: 0.15rem;}
 h2 {font-size: 1.25rem; letter-spacing: 0.125rem;}
@@ -87,7 +86,7 @@ ol a:hover {color: black; border-bottom-color: black;}
 
 fieldset
 {
-	display: inline-block; width: auto; max-width: 100%; padding: 1rem; margin-top: 0.25rem;
+	display: inline-block; width: auto; max-width: 100%; padding: 1rem 0; margin-top: 0.25rem;
 	border: solid 0.1rem rgba(0,0,0,0); border-radius: 0.25rem; animation: 2s fieldset linear infinite;
 }
 @keyframes fieldset {
@@ -121,7 +120,7 @@ a, input, output {transition: ease-in-out 0.375s;}
 /*@media (prefers-color-scheme: light) {path {fill: #000000;}}*/
 
 /*Breakpoints*/
-@media only screen and (max-width: 45rem) {
+@media only screen and (max-width: 720px) {
 	body {grid-template-areas:
 		'header'
 		'content'

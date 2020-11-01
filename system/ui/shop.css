@@ -1,0 +1,26 @@
+.shop {display: grid; grid-gap: 4rem 1rem; grid-template-columns: auto auto; padding: 4rem 1rem;}
+
+.shop-title {border-top: 0.1rem solid black; text-align: left; margin-top: 4rem; margin-left: 2rem; margin-right: 2rem;}
+.shop-title h2, .shop-title h3 {display: inline-block; background-color: white; font-size: 1.25rem; margin-top: -0.75rem; padding-right: 1rem;}
+
+.snipcart-add-item {cursor: pointer; list-style-type: none; display: inline-block; width: 16rem; background-color: white; border-radius: 2rem; box-shadow: 0 0.125rem 2rem 0 rgba(0,0,0,0.125); padding-top: 0.5rem; padding-bottom: 0.5rem; transition: 0.375s ease-in-out;}
+.snipcart-add-item:hover {background-color: #6FDEDE;}
+
+.snipcart-add-item li {padding: 0.75rem 1rem; text-align: left; border-top: 0.075rem dotted rgba(0,0,0,0.5);}
+.snipcart-add-item li img {border-radius: 50%;}
+.snipcart-add-item li:first-of-type, .snipcart-add-item li:nth-of-type(2) {border-top: initial; text-align: center;}
+.snipcart-add-item li:nth-of-type(2) {font-weight: 700; text-transform: uppercase;}
+
+.snipcart-add-item.se {background-color: #202020; color: white;}
+.snipcart-add-item.se:hover {color: #6FDEDE;}
+.snipcart-add-item.se li {border-top: 0.075rem dotted rgba(255,255,255,0.5);}
+.snipcart-add-item.se li:first-of-type, .snipcart-add-item.se li:nth-of-type(2) {border-top: initial;}
+
+.snipcart-items-count {position: absolute; display: inline-block; font-size: 0.75rem; color: #6FDEDE; margin-top: -0.5rem; margin-left: -0.775rem;}
+
+.snipcart * {font-family: 'EP' !important;}
+.snipcart-featured-payment-methods {display: none !important;}
+.snipcart-item-line__title {font-weight: 400 !important;}
+.snipcart-item-description {text-align: left;}
+
+@media only screen and (max-width: 1080px) {.shop {grid-template-columns: auto;}}
