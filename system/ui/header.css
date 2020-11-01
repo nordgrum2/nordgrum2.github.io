@@ -8,7 +8,7 @@ header li:first-of-type {float: left;}
 .nav-s {display: inline-block; width: 3rem; height: 3rem; padding: 0.7rem 0.7rem 0.8rem 0.8rem; font-family: monospace; font-size: 0.5rem; line-height: 0.5rem; letter-spacing: 0.25rem; color: #6FDEDE;}
 .nav-c {display: none; font-family: "Segoe MDL2 Assets"; font-size: 1.5rem; padding: 0.75rem; color: #6FDEDE;}
 
-@media only screen and (max-width: 720) {
+@media only screen and (max-width: 45rem) {
 	header {background-color: rgba(32,32,32,0.95); box-shadow: 0 0.125rem 0.25rem 0 rgba(0,0,0,0.125); height: 4rem;}
 	header ul {text-align: left; padding: 0.45rem;}
 	header li:first-of-type {float: right;}

@@ -121,7 +121,7 @@ a, input, output {transition: ease-in-out 0.375s;}
 /*@media (prefers-color-scheme: light) {path {fill: #000000;}}*/
 
 /*Breakpoints*/
-@media only screen and (max-width: 720) {
+@media only screen and (max-width: 45rem) {
 	body {grid-template-areas:
 		'header'
 		'content'

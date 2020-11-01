@@ -12,4 +12,4 @@
 .page-nav li a {color: white;}
 .page-nav li a:hover {color: #6FDEDE;}
 
-@media only screen and (max-width: 720) {.page-nav {display: none;}}
+@media only screen and (max-width: 45rem) {.page-nav {display: none;}}
