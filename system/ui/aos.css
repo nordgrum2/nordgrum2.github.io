@@ -21,3 +21,11 @@
 @keyframes move-right {100% {opacity: 1; transform: translateX(0);}}
 [data-aos=move-left] {opacity: 0.25; transform: translateX(16rem);} [data-aos=move-left].aos {animation-name: move-left;}
 @keyframes move-left {100% {opacity: 1; transform: translateX(0);}}
+
+[data-aos=move-up-right] {opacity: 0.25; transform: translate(-16rem,16rem);}
+[data-aos=move-up-right].aos {animation-name: move-up-right;}
+@keyframes move-up-right {100% {opacity: 1; transform: translate(0,0);}}
+
+[data-aos=move-down-right] {opacity: 0.25; transform: translate(-16rem,-16rem);}
+[data-aos=move-down-right].aos {animation-name: move-down-right;}
+@keyframes move-down-right {100% {opacity: 1; transform: translate(0,0);}}

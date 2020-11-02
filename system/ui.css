@@ -4,7 +4,9 @@
 @import url('ui/footer.css');
 
 /*Modules 2*/
+@import url('ui/load.css');
 @import url('ui/page-nav.css');
+@import url('ui/cursor.css');
 
 /*Features*/
 @import url('ui/shop.css');
@@ -25,16 +27,15 @@ html {text-align: center; scroll-behavior: smooth;} body {overflow-x: hidden; ov
 
 * {box-sizing: border-box; vertical-align: top; border: initial; margin: initial; padding: initial; outline: initial; font-family: 'EP', Sans-Serif; cursor: none;}
 
-body {background-color: white; display: grid;
+body {display: grid;
 	grid-template-areas:
 	'page-nav header header'
 	'page-nav content social'
 	'page-nav footer social';}
 
-body > section {grid-area: content;}
+body > section {grid-area: content; overflow-y: hidden;}
 body > footer {grid-area: footer;}
 
-section {padding-top: 2rem;}
 section > h1, section > h2, section > h3, section > p {padding-left: 2rem; padding-right: 2rem;}
 
 h1 {font-size: 1.5rem; letter-spacing: 0.15rem;}

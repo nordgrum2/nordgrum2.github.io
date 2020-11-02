@@ -34,8 +34,10 @@ $('.nav-3 li a').click(function(){nav_c();});
 function totop() {$(window).scrollTop($('body').offset().top);}
 function tobottom() {$(window).scrollTop($('footer p').offset().top);}
 
+$('.hero').bind('mousewheel', function(e){if(e.originalEvent.wheelDelta < 0) {$(window).scrollTop($('h1').offset().top -128);}});
+
 //Demo
-$('body').append('<a class="stop-demo mdl2" href="javascript:scroll_p();"></a>');
+$('body').append('<a class="stop-demo" href="javascript:scroll_p();"></a>');
 $('footer').after('<audio src="https://electro-point.net/media/mp3/music-2.mp3" loop></audio>');
 
 //Global
@@ -58,14 +60,10 @@ $('[data-aos-dur]').each(function(){var aos_dur = $(this).attr('data-aos-dur'); 
 function moveCursor(e) {TweenLite.to($('.cursor'), 0, {css: {left: e.pageX, top: e.pageY}});} $(window).on('mousemove', moveCursor);
 function moveCircle(e) {TweenLite.to($('.circle'), 0.5, {css: {left: e.pageX, top: e.pageY}});} $(window).on('mousemove', moveCircle);
 
-$('a, button, input, .snipcart-add-item, .snipcart-checkout, .snipcart-customer-signin').hover(function(){$('.cursor').css({'color': 'white', 'text-shadow': 'initial'}); $('.circle').css({'background-color': 'rgba(0,0,0,0.125)', 'border': 'initial', 'box-shadow': 'initial'});},
-				  function(){$('.cursor').css({'color': 'black', 'text-shadow': '0 0 0 0.25rem white'}); $('.circle').css({'background-color': 'initial', 'border': 'solid 0.0625rem black', 'box-shadow': '0 0 0 0.0625rem white'});});
+$('a, button, input, .snipcart-add-item, .snipcart-checkout, .snipcart-customer-signin').hover(function(){$('.cursor, .circle').addClass('hover');}, function(){$('.cursor, .circle').removeClass('hover');});
 
-$('header, nav, footer, .social').hover(function(){$('.cursor').css({'color': 'white', 'text-shadow': '0 0 0 0.25rem black'}); $('.circle').css({'border': 'solid 0.0625rem white', 'box-shadow': '0 0 0 0.0625rem black'});},
-				  function(){$('.cursor').css({'color': 'black', 'text-shadow': '0 0 0 0.25rem white'}); $('.circle').css({'border': 'solid 0.0625rem black', 'box-shadow': '0 0 0 0.0625rem white'});});
-
-$('header a, header span, nav a, footer a, .social a, .shop ul.se').hover(function(){$('.cursor').css({'color': 'white', 'text-shadow': 'initial'}); $('.circle').css({'background-color': 'rgba(255,255,255,0.25)', 'border': 'initial', 'box-shadow': 'initial'});},
-					function(){$('.cursor').css({'color': 'white', 'text-shadow': '0 0 0 0.25rem black'}); $('.circle').css({'background-color': 'initial', 'border': 'solid 0.0625rem white', 'box-shadow': '0 0 0 0.0625rem black'});});
+$('header, nav, footer, .social, .hero').hover(function(){$('.cursor, .circle').addClass('type-2');}, function(){$('.cursor, .circle').removeClass('type-2');});
+$('header a, header span, nav a, footer a, .social a, .shop ul.se').hover(function(){$('.cursor, .circle').addClass('hover-2');}, function(){$('.cursor, .circle').removeClass('hover-2');});
 
 //Parallax
 $(document).mousemove(function(e){parallaxIt(e, "[parallax=follow]", 50); parallaxIt(e, "[parallax=unfollow]", -50); parallaxIt(e, "[parallax=follow-x2]", 100); parallaxIt(e, "[parallax=unfollow-x2]", -100);});

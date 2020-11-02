@@ -9,27 +9,6 @@
 
 a.mdl2, span.mdl2, li.mdl2, a.fa, span.fa, li.fa {display: inline-block;}
 
-/*Loader*/
-.loader {
-	z-index: 10000; display: inline-block; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: #101010; color: white;}
-.loader > div, .loader > span:nth-of-type(1) {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) rotate(0deg);}
-.loader > div:nth-of-type(1) {
-	display: inline-block; width: 16rem; height: 16rem; border-bottom: 0.1rem dashed white; border-left: 0.1rem dashed white; border-radius: 50%; animation: loader 1s linear infinite; border-top: 0.2rem solid transparent;}
-@keyframes loader {100% {transform: translate(-50%,-50%) rotate(360deg);}}
-.loader > div:nth-of-type(2) {
-	display: inline-block; width: 15rem; height: 15rem; border-bottom: 0.1rem dashed #6FDEDE; border-right: 0.1rem dashed #6FDEDE; border-radius: 50%; animation: loader-2 1s linear infinite; border-top: 0.2rem solid transparent}
-@keyframes loader-2 {100% {transform: translate(-50%,-50%) rotate(-360deg);}}
-.loader > span {width: 100%;}
-.loader > span:nth-of-type(1) {
-	font-size: 1rem; letter-spacing: 1rem; padding-left: 1rem; text-transform: uppercase;}
-.loader > span:nth-of-type(2) {
-	position: absolute; bottom: 1.5rem; left: 50%; transform: translate(-50%,0%); font-size: 1rem; letter-spacing: 0.0875rem; padding-left: 0.0875rem; color: #6FDEDE;}
-
-/*Cursor*/
-.cursor {z-index: 9999; font-family: 'Segoe MDL2 Assets'; font-size: 1rem; color: black; top: 50%; left: 50%; transform: translate(-0.5rem,-0.5rem); text-shadow: 0 0 0 0.25rem white;}
-.circle {z-index: 9998; border: solid 0.0625rem black; transform: translate(-1.95rem,-1.95rem); width: 4rem; height: 4rem; box-shadow: 0 0 0 0.0625rem white;}
-.cursor, .circle {position: absolute; border-radius: 50%; pointer-events: none;}
-
 /*Design*/
 .h {display: block; font-size: 2rem; font-weight: 700;}
 .p {font-size: 1rem; font-weight: 400;}
@@ -41,9 +20,6 @@ a.mdl2, span.mdl2, li.mdl2, a.fa, span.fa, li.fa {display: inline-block;}
 .vw {display: inline-block; width: 65%;}
 .vw > h1, .vw > h2, .vw > h3, .vw > h4, .vw > p {padding-left: 1rem; padding-right: 1rem;}
 .fw {width: 100%;} .mw {max-width: 100%;}
-
-.hero span {font-size: 1.25rem; font-weight: 700;}
-.hero .btn {margin-top: 1rem;}
 
 /*Align*/
 .ta-c {text-align: center !important;} .ta-l {text-align: left !important;} .ta-r {text-align: right !important;} .ta-j {text-align: justify !important;}
@@ -57,7 +33,7 @@ a.mdl2, span.mdl2, li.mdl2, a.fa, span.fa, li.fa {display: inline-block;}
 
 .hr, .hd {margin-top: 4rem; margin-bottom: 4rem;}
 
-.stop-demo.mdl2 {background-color: black; color: white; font-size: 6rem; opacity: 0.5; z-index: 1000; position: fixed; top: -10rem; left: 50%; transform: translate(-50%,0%); border-radius: 50%; width: 8rem; height: 8rem; padding: 1rem; padding-top: 0.75rem; animation: stop 6s linear infinite;}
+.stop-demo {background-color: black; color: white; font-family: "Segoe MDL2 Assets"; font-size: 6rem; opacity: 0.5; z-index: 1000; position: fixed; top: -10rem; left: 50%; transform: translate(-50%,0%); border-radius: 50%; width: 8rem; height: 8rem; padding: 1rem; padding-top: 0.75rem; animation: stop 6s linear infinite;}
 .stop-demo:hover {transform: translate(-50%,0%) scale(0.75); color: white;}
 
 .center {position: absolute; width: 100%; height: 100%; z-index: 1; top: 0; left: 0;}
@@ -84,6 +60,21 @@ a.mdl2, span.mdl2, li.mdl2, a.fa, span.fa, li.fa {display: inline-block;}
 .social li:first-of-type a {margin-top: initial;}
 .social a {display: inline-block; transform: rotate(90deg); margin-top: 8rem; color: white;}
 
+.hero {background-color: #202020; height: calc(100vh - 5rem); display: grid; padding: 4rem 2rem; grid-gap: 4rem 2rem; grid-template-columns: 37.5% 62.5%; grid-template-areas: 'hero-div hero-img';}
+.hero > * {margin: auto 0; color: white;}
+.hero > div {grid-area: hero-div; text-align: left;}
+.hero img {grid-area: hero-img; min-width: 18rem; max-width: 100%;}
+.hero > div > div > div {display: inline-block; width: 1.5rem; height: 3rem; border-radius: 1.25rem; border: 0.1rem solid white; padding: 0.25rem;}
+.hero > div > div > div > div {background-color: white; width: 0.75rem; height: 0.75rem; border-radius: 50%; transition: ease-in-out 0.375s;}
+.hero > div > div > span {display: block; margin-top: 1rem; font-weight: 700; letter-spacing: 0.5rem; font-variant: small-caps;}
+.hero > div > div {text-align: center; margin-top: 2rem;}
+.hero > div > div:hover > div > div {margin-top: 1.5rem;}
+
 /*Breakpoints*/
-@media only screen and (max-width: 1080px) {.grid-col-2 {grid-template-columns: auto;}}
-@media only screen and (max-width: 720px) {.trust-us img {width: 100%;} .social {display: none;}}
+@media only screen and (max-width: 1080px) {
+	.hero {height: calc(100vh - 4rem); grid-template-columns: auto; grid-template-areas: 'hero-img' 'hero-div'}
+}
+@media only screen and (max-width: 720px) {
+	.trust-us img {width: 100%;}
+	.social {display: none;}
+}
