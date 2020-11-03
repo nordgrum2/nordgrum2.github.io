@@ -55,20 +55,18 @@ a.mdl2, span.mdl2, li.mdl2, a.fa, span.fa, li.fa {display: inline-block;}
 .trust-us span {display: block; font-size: 1.5rem; font-weight: 700; letter-spacing: 0.15rem; text-transform: uppercase; opacity: 0.75;}
 .trust-us img {width: 75%; opacity: 0.75; margin-top: 2rem;}
 
-.social {grid-area: social; background-color: #202020;}
-.social ul {position: sticky; top: 50%; transform: translate(0,-50%);}
-.social li:first-of-type a {margin-top: initial;}
-.social a {display: inline-block; transform: rotate(90deg); margin-top: 8rem; color: white;}
+.social {grid-area: social; background-color: #202020; width: 4rem;}
+.social ul {position: sticky; top: 50%; transform: translate(0,-50%); height: calc(100vh - 5rem); display: grid; grid-template-columns: auto; padding-top: 4rem;}
+.social li {transform: rotate(90deg); margin: auto 0; margin-left: -0.25rem;}
+.social a {color: white;}
 
-.hero {background-color: #202020; height: calc(100vh - 5rem); display: grid; padding: 4rem 2rem; grid-gap: 4rem 2rem; grid-template-columns: 37.5% 62.5%; grid-template-areas: 'hero-div hero-img';}
+.hero {background-color: #202020; height: calc(100vh - 5rem); display: grid; padding: 2rem; grid-gap: 2rem; grid-template-columns: 37.5% 62.5%; grid-template-areas: 'hero-div hero-img'; margin-bottom: 2rem;}
 .hero > * {margin: auto 0; color: white;}
 .hero > div {grid-area: hero-div; text-align: left;}
 .hero img {grid-area: hero-img; min-width: 18rem; max-width: 100%;}
-.hero > div > div > div {display: inline-block; width: 1.5rem; height: 3rem; border-radius: 1.25rem; border: 0.1rem solid white; padding: 0.25rem;}
-.hero > div > div > div > div {background-color: white; width: 0.75rem; height: 0.75rem; border-radius: 50%; transition: ease-in-out 0.375s;}
-.hero > div > div > span {display: block; margin-top: 1rem; font-weight: 700; letter-spacing: 0.5rem; font-variant: small-caps;}
+.hero > div > div > div {display: inline-block; width: 1rem; height: 2rem; border-radius: 1.25rem; border: 0.1rem solid white;}
+.hero > div > div > span {display: block; font-size: 0.875rem; margin-top: 1rem; font-weight: 700; letter-spacing: 0.5rem; font-variant: small-caps;}
 .hero > div > div {text-align: center; margin-top: 2rem;}
-.hero > div > div:hover > div > div {margin-top: 1.5rem;}
 
 /*Breakpoints*/
 @media only screen and (max-width: 1080px) {

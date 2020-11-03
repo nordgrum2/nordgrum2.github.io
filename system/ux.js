@@ -29,16 +29,14 @@ if ($(window).width() < 720) {window.onscroll = function() {
 function nav() {$('.nav').css('left', nav_left); $('body').css('overflow-y', 'hidden'); $('.nav-s').css('display', 'none'); $('.nav-c').css('display', 'inline-block');}
 function nav_c() {$('.nav').css('left', '-125%'); $('body').css('overflow-y', 'initial'); $('.nav-c').css('display', 'none'); $('.nav-s').css('display', 'inline-block');}
 
-$('.nav-3 li a').click(function(){nav_c();});
+$('.page-nav a, .nav-3 li a').click(function(){nav_c();});
 
 function totop() {$(window).scrollTop($('body').offset().top);}
 function tobottom() {$(window).scrollTop($('footer p').offset().top);}
 
-$('.hero').bind('mousewheel', function(e){if(e.originalEvent.wheelDelta < 0) {$(window).scrollTop($('h1').offset().top -128);}});
-
 //Demo
 $('body').append('<a class="stop-demo" href="javascript:scroll_p();"></a>');
-$('footer').after('<audio src="https://electro-point.net/media/mp3/music-2.mp3" loop></audio>');
+$('footer').after('<audio src="https://electro-point.net/media/mp3/music.mp3" loop></audio>');
 
 //Global
 $('.hr').addClass('vw');
@@ -69,6 +67,8 @@ $('header a, header span, nav a, footer a, .social a, .shop ul.se').hover(functi
 $(document).mousemove(function(e){parallaxIt(e, "[parallax=follow]", 50); parallaxIt(e, "[parallax=unfollow]", -50); parallaxIt(e, "[parallax=follow-x2]", 100); parallaxIt(e, "[parallax=unfollow-x2]", -100);});
 function parallaxIt(e, target, movement){var $this = $("body"); var relX = e.pageX - $this.offset().left; var relY = e.pageY - $this.offset().top; TweenMax.to(target, 1, {x: (relX - $this.width() / 2) / $this.width() * movement, y: (relY - $this.height() / 2) / $this.height() * movement});}
 $(document).mousemove(function(event){$("[parallax=angle]").each(function(index, element){var xPos = (event.clientX/$(window).width())-0.5, yPos = (event.clientY/$(window).height())-0.5, box = element; TweenLite.to(box, 1, {rotationY: xPos * -100, rotationX: yPos * 100, ease: Power1.easeOut,});})});
+
+$(window).on('wheel', function(event){if(event.originalEvent.deltaY > 0){$(window).scrollTop($('h1').offset().top -128);}});
 
 //Forms
 var submitted=false;
